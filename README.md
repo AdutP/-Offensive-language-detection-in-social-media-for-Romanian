@@ -1,6 +1,10 @@
 # Offensive-language-detection-in-social-media-for-Romanian
 by Toxic Players
 
+- **Elena Calmis**
+- **Liliana Gavrilas**
+- **Adrian Plesescu** (project leader)
+
 ##  Week 1
 ### Usecases
 1. Social Media platforms wanting to monitor and filter offensive content.
@@ -9,3 +13,5 @@ by Toxic Players
 4. Basically all platforms managing a comment section, including online stores, blogs, etc. 
 
 *(censoring notice is forwarded to the offender, prefferably with an atached explanation)*
+
+### Language: Python
