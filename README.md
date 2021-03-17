@@ -29,11 +29,11 @@ by Toxic Players
   - Twitch live comments extractor -> a crawler(v.0.1) that combined with [a timed html saving chrome extension](https://chrome.google.com/webstore/detail/autosave-webpage/kfnkfhdbeidcdpdlefbfabepmfhldkoi) produces a list of comments
 2. Built a [Trello page](https://trello.com/b/wBNqe7h3/offensive-language-detection-in-social-media-for-romanian) to easily monitor progress.
 
-##  Week 3 (10.mar - 17.mar)
+##  Week 4 (10.mar - 17.mar)
 ### Corpus and Lexicon Building
 1. We updated our existing shallow corpus with thousands of YouTube comments dynamically gathered by a python scrips and a few hundreds from Facebook.
 2. Running the last week's sentiment analyzer, we found out that the results were largely inconclusive. 
-3. We manually annotated them on the basis of 3 categories = Offensive/ Non-offensive/ Neutral, but at this point we have doubts of the accuracy of these annotations. That is because we discovered that many comments are offensive only looking at the context/ or can be better classified at threats or hate. We surely have to step back and rethink this issue.
+3. We manually annotated them on the basis of 3 categories = Offensive/ Non-offensive/ Neutral(which we can also count), but at this point we have doubts of the accuracy of these annotations. That is because we discovered that many comments are offensive only looking at the context/ or can be better classified at threats or hate. We surely have to step back and rethink this issue.
 4. Having the Romanian Dictionary's(dex) database already downloaded from last week, we queried it based on representative tags/ abbreviations for our specific problem (prst., obs., vulg., eufem, depr.) and filtered them manually. This was done to gather a lexicon of bad words and expressions to use it as a first wall against the use of obscene words, no matter the context. We will be improving it (460+).
 5. We currently have to resolve how our program can deal with common abbreviations / misspelled words / emoji combos / popular spellings (more or less like the ones we found in the comments at this time).
 6. As for the next spring, we can think more about the difficulties we faced and also work at the tokenization, stemming, lemmatization and pos tagging. I think this will give us a clearer picture on how we need to adapt our corpus for real work and a bit of insight on the ML algorithm / neural network we will use in the weeks to come.
