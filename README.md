@@ -5,6 +5,10 @@ by Toxic Players
 - **Liliana Gavrilas**
 - **Adrian Plesescu** (project leader)
 
+##  Links
+> [Trello](https://trello.com/b/wBNqe7h3/offensive-language-detection-in-social-media-for-romanian)
+> [Project Description Document](https://docs.google.com/document/d/195N0kqXc-AFzPUR4RPY2n59n6XzWKZrdynWKp9xj4jk/edit?usp=sharing)
+
 ##  Week 1
 ### Usecases
 1. Social Media platforms wanting to monitor and filter offensive content.
@@ -37,4 +41,4 @@ by Toxic Players
 4. Having the Romanian Dictionary's(dex) database already downloaded from last week, we queried it based on representative tags/ abbreviations for our specific problem (prst., obs., vulg., eufem, depr.) and filtered them manually. This was done to gather a lexicon of bad words and expressions to use it as a first wall against the use of obscene words, no matter the context. We will be improving it (460+).
 5. We currently have to resolve how our program can deal with common abbreviations / misspelled words / emoji combos / popular spellings (more or less like the ones we found in the comments at this time).
 6. As for the next spring, we can think more about the difficulties we faced and also work at the tokenization, stemming, lemmatization and pos tagging. I think this will give us a clearer picture on how we need to adapt our corpus for real work and a bit of insight on the ML algorithm / neural network we will use in the weeks to come.
-7. We also worked at the frontend (one main page with a textbox + a second page for the result). This said, we leave an open door for next improvements like advanced options / filtering and black box interpretations.
+7. We have also worked on the frontend side(one main page with a textbox + a second page for the result). This said, we leave an open door for next improvements like advanced options / filtering and black box interpretations.
