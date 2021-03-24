@@ -7,6 +7,7 @@ by Toxic Players
 
 ##  Links
 > [Trello](https://trello.com/b/wBNqe7h3/offensive-language-detection-in-social-media-for-romanian)
+> 
 > [Project Description Document](https://docs.google.com/document/d/195N0kqXc-AFzPUR4RPY2n59n6XzWKZrdynWKp9xj4jk/edit?usp=sharing)
 
 ##  Week 1
@@ -40,5 +41,16 @@ by Toxic Players
 3. We manually annotated them on the basis of 3 categories = Offensive/ Non-offensive/ Neutral(which we can also count), but at this point we have doubts of the accuracy of these annotations. That is because we discovered that many comments are offensive only looking at the context/ or can be better classified at threats or hate. We surely have to step back and rethink this issue.
 4. Having the Romanian Dictionary's(dex) database already downloaded from last week, we queried it based on representative tags/ abbreviations for our specific problem (prst., obs., vulg., eufem, depr.) and filtered them manually. This was done to gather a lexicon of bad words and expressions to use it as a first wall against the use of obscene words, no matter the context. We will be improving it (460+).
 5. We currently have to resolve how our program can deal with common abbreviations / misspelled words / emoji combos / popular spellings (more or less like the ones we found in the comments at this time).
-6. As for the next spring, we can think more about the difficulties we faced and also work at the tokenization, stemming, lemmatization and pos tagging. I think this will give us a clearer picture on how we need to adapt our corpus for real work and a bit of insight on the ML algorithm / neural network we will use in the weeks to come.
+6. As for the next sprint, we can think more about the difficulties we faced and also work at the tokenization, stemming, lemmatization and pos tagging. I think this will give us a clearer picture on how we need to adapt our corpus for real work and a bit of insight on the ML algorithm / neural network we will use in the weeks to come.
 7. We have also worked on the frontend side(one main page with a textbox + a second page for the result). This said, we leave an open door for next improvements like advanced options / filtering and black box interpretations.
+
+##  Week 4 (17.mar - 24.mar)
+### Preprocessing module
+1. This weeks's attention was on resources that can help us preprocess data. We managed to write a script that normalizes, removes stop words and punctuation marks and lemmatizes random texts.
+2. Using these 2 links we received last week: [the TEPROLIN documentation](http://relate.racai.ro/index.php?path=teprolin/doc_dev) and [the UAIC Natural Language Processing Group's Resources and Tools](http://nlptools.info.uaic.ro/Resources.jsp?fbclid=IwAR1LZO5t4sT8n96b1OVvz7-BrqH5FAovJG1tMuYl0TjSsH65pK46XPEiryU), we enriched our understanding on preprocessing and our NLP vocabulary(anaphora, chunking, etc.).
+3. Through TEPROLIN's API, we fed a sentence and received its POS tagging, followed by lemmatization.
+4. We compared different methods of lemmatization inluding the snowball lemmatizer and the one TEPROLIN provides us, concluding that the second delivers a better performance. We will use TEPROLIN further in the project and hope its standardized format will help us in the integration process.
+5. We researched language models and how can we build one using an existing corpus for Romanian. We tried using Rowordnet but failed discovering that synsets can be valuable later on. Not being able to easily import a Romanian corpus through nltk(because there is none available in the nltk.corpus) and not being able to download parts of CoRoLa, we are still trying to find a solution.
+6. Everyone filled out the SWOT part of the project descripton file, but sections such as goal and qualitative benchmarks are needed to be further discussed.
+7. Research about input has led us to [this article](https://blog.insightdatascience.com/how-to-solve-90-of-nlp-problems-a-step-by-step-guide-fda605278e4e), which will serve as guideline. 
+8. We centralized the corpus comment files and counted the annotated texts:
