@@ -44,7 +44,7 @@ by Toxic Players
 6. As for the next sprint, we can think more about the difficulties we faced and also work at the tokenization, stemming, lemmatization and pos tagging. I think this will give us a clearer picture on how we need to adapt our corpus for real work and a bit of insight on the ML algorithm / neural network we will use in the weeks to come.
 7. We have also worked on the frontend side(one main page with a textbox + a second page for the result). This said, we leave an open door for next improvements like advanced options / filtering and black box interpretations.
 
-##  Week 4 (17.mar - 24.mar)
+##  Week 5 (17.mar - 24.mar)
 ### Preprocessing module
 1. This weeks's attention was on resources that can help us preprocess data. We managed to write a script that normalizes, removes stop words and punctuation marks and lemmatizes random texts.
 2. Using these 2 links we received last week: [the TEPROLIN documentation](http://relate.racai.ro/index.php?path=teprolin/doc_dev) and [the UAIC Natural Language Processing Group's Resources and Tools](http://nlptools.info.uaic.ro/Resources.jsp?fbclid=IwAR1LZO5t4sT8n96b1OVvz7-BrqH5FAovJG1tMuYl0TjSsH65pK46XPEiryU), we enriched our understanding on preprocessing and our NLP vocabulary(anaphora, chunking, etc.).
@@ -53,4 +53,14 @@ by Toxic Players
 5. We researched language models and how can we build one using an existing corpus for Romanian. We tried using Rowordnet but failed discovering that synsets can be valuable later on. Not being able to easily import a Romanian corpus through nltk(because there is none available in the nltk.corpus) and not being able to download parts of CoRoLa, we are still trying to find a solution.
 6. Everyone filled out the SWOT part of the project descripton file, but sections such as goal and qualitative benchmarks are needed to be further discussed.
 7. Research about input has led us to [this article](https://blog.insightdatascience.com/how-to-solve-90-of-nlp-problems-a-step-by-step-guide-fda605278e4e), which will serve as guideline. 
-8. We centralized the corpus comment files and counted the annotated texts:
+8. We centralized the corpus comment files and counted the annotated texts: ~3000
+
+##  Week 6 (24.mar - 31.mar)
+### Corpus integration and ML tryouts
+1. This week we had a second collaboration/exchange with another team =>TEPROLIN connection / <=a large corpus(~12.000 non-offensive & ~6.000 offensive comments). This came at a good time for us, giving that we had already planed to implement preprocessing operations on our dataset. After we took a look at this new corpus, it became obvious that we had a "positive bias", and based our classification of offensive comments on other criteria.
+2. We compiled the received dataset in a .csv file and began adding our own comments to lower the inbalance between the 2 categories. This meant converting our -1/0/1 system to a 0/1.
+3. We used our stop word removal and tokenization in conjuction with TEPROLIN's POS tagging(also gives us the lemma). 
+4. We researched how POS tagging can influence and create a feature in the Naive Bayes algorithm. This lead us to implement our own algorithm, but also test pre-built ones such as those provided by [scikit learn](https://scikit-learn.org/stable/).
+5. Thought of filters for detecting misspelings(internal) and a spellchecker module for Romanian(an external one but no results).
+6. We researched [BERT](https://mccormickml.com/2019/05/14/BERT-word-embeddings-tutorial/) but have to build a larger knowledge base in order to fully understand it.
+7. We found new resources to use for the next 2 weeks: [BERT](https://www.youtube.com/watch?v=FKlPCK1uFrc&list=PLam9sigHPGwOBuH4_4fr-XvDbe5uneaf6), [Voting Process](https://www.youtube.com/watch?v=vlTQLb_a564&list=PLQVvvaa0QuDf2JswnfiGkliBInZnIC4HL&index=16) and [NLP-Cube](https://github.com/adobe/NLP-Cube), [udpipe](https://ufal.mff.cuni.cz/udpipe), [paperswithcode.com](https://paperswithcode.com/area/natural-language-processing)(from the 30.mar course) 
