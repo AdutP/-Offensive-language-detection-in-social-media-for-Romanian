@@ -9,11 +9,13 @@ by Toxic Players
 > [Trello](https://trello.com/b/wBNqe7h3/offensive-language-detection-in-social-media-for-romanian)
 > 
 > [Project Description Document](https://docs.google.com/document/d/195N0kqXc-AFzPUR4RPY2n59n6XzWKZrdynWKp9xj4jk/edit?usp=sharing)
+>
+>[Final Presentation Slides](https://docs.google.com/presentation/d/1progrTo7dFPOynjir5LjMhU1GDTVQNZO64fOEZSlEcU/edit?usp=sharing)
 
 ##  Week 1
 ### Usecases
 1. Social Media platforms wanting to monitor and filter offensive content.
-2. Gouvernment entities fighting against possible online threats.
+2. Government entities fighting against possible online threats.
 3. Antivirus like programs which act as a firewall that blocks children to access certain toxic/ offensive/ hateful contents.
 4. Basically all platforms managing a comment section, including online stores, blogs, etc. 
 
