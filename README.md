@@ -89,3 +89,15 @@ by Toxic Players
 3. We kept in mind the idea of treating misspelled/ English words differend then others, so we implemented some simple rules that recognize and correct/ filter these inputs.
 4. We designed a minimal interface build in our Colab notebook not only as a temporary alternative for the full feature web one, but also as a practical test machine for whoever wants to work directly besides the code.
 5. Based on the 3 ways we processed the input (1.No postagging+No lemmatization; 2.Only lemmatization; 3.Postagging+Lemmatization), Liliana placed the results into a spreadsheed graph as follows: ![Initial test graph](https://scontent.fias1-1.fna.fbcdn.net/v/t1.15752-9/s2048x2048/184817249_1468372280161322_1505668875124563682_n.png?_nc_cat=103&ccb=1-3&_nc_sid=ae9488&_nc_ohc=Ewxg8HuejNIAX8u-wWa&_nc_ht=scontent.fias1-1.fna&tp=30&oh=38dfa1b2c2afc3bab0ed6c12f791de04&oe=60D2E68A)
+
+## Week 12 (12.may - 19.may)
+### Voting and testing
+1. As promised, Elena implemented the voting mechanism, which works as follows: there are 2 types - hard and soft - each one having the 'all' and 'best3' variations. Hard vodes with 0 and 1. On the other hand, soft votes by assigning probabilities. We discovered that soft-best3 works best, but is in fact the slowest; no surprise there.
+2. Liliana further updated the graphs, now adding the new results in a new format. She added everything to a pdf:![This week's graph](https://scontent.fias1-1.fna.fbcdn.net/v/t1.15752-9/187701834_202814018347533_4742401432452528793_n.png?_nc_cat=102&ccb=1-3&_nc_sid=ae9488&_nc_ohc=JJsO_v2lT74AX9OONBQ&_nc_ht=scontent.fias1-1.fna&oh=a60c0680230ae9662f7c7bb9da6a7740&oe=60D3FC70)
+3. We are halfway done with the the proper web interface which we are keen on doing, beacuse it will show how well integrated our modules are.
+
+## Week 13 (19.may - 25.may)
+### Built the interface
+1. We finished the interface, meaning we integrated our backend prediction code with our other modules(OCR, trained models) through an api flask backend and a Vue3 frontend. We had not worked with Vue previously, and it was a learning curve. Our code might not be pretty:), but it is functional. We built components using at-design and made a logo.
+2. The interface has 3 main functionalities: can test typed text input, csv input and images. The results mirror the Colab interface + upload an image and if the whole text on it is considelled offensive, blurr it + upload a csv file and simultaniously test the whole text and each comment individually.
+3. Finally, we encountered difficulties with the CORS (we tested with Postman and mockapi) and still did not managed to find a solution. Also, little design flaws like not filtering uploads make us feel unsure about how the interface will behave online (on Heroku).
