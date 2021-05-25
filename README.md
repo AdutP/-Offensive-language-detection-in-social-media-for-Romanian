@@ -81,3 +81,11 @@ by Toxic Players
 3. We added 2 new algorithms to the code and tested again, these time with precision and recall. Also, we managed to save the results, in order to review them each time we add a new feature or test a different encoding system.
 4. We also tested TEPROLIN's lemmatization, but our results didn't seem to improve.
 5. Being already in the late in the semester, we plan to finalize the project within 1-2 weeks after Easter. We've thought of many features and models we could implement each week, but we felt the lack of time/previous knowledge to do proper research and implement things from scratch. We would really like to use BERT and Deep Learning to be on part with what's being discussed at the course.
+
+## Week 10&11 (29.apr - 12.may)
+### Expanding the algoritms on the 12,000 comment corpus
+1. After the Easter break we managed to add 4 new algoritms which we ran on the whole corpus.
+2. We gathered all outputs and compiled them into a test report in order to revie them later and compare future variations of the model.
+3. We kept in mind the idea of treating misspelled/ English words differend then others, so we implemented some simple rules that recognize and correct/ filter these inputs.
+4. We designed a minimal interface build in our Colab notebook not only as a temporary alternative for the full feature web one, but also as a practical test machine for whoever wants to work directly besides the code.
+5. Based on the 3 ways we processed the input (1.No postagging+No lemmatization; 2.Only lemmatization; 3.Postagging+Lemmatization), Liliana placed the results into a spreadsheed graph as follows: ![Initial test graph](https://scontent.fias1-1.fna.fbcdn.net/v/t1.15752-9/s2048x2048/184817249_1468372280161322_1505668875124563682_n.png?_nc_cat=103&ccb=1-3&_nc_sid=ae9488&_nc_ohc=Ewxg8HuejNIAX8u-wWa&_nc_ht=scontent.fias1-1.fna&tp=30&oh=38dfa1b2c2afc3bab0ed6c12f791de04&oe=60D2E68A)
