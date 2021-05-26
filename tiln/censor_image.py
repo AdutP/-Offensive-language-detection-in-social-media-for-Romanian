@@ -202,7 +202,7 @@ def test_image(img, model):
     comment = ""
 
     for roi in result:
-        x, y, w, h = roi[0][0][0], roi[0][0][1], abs(roi[0][1][0] - roi[0][0][0]), abs(roi[0][2][1] - roi[0][1][1])
+        x, y, w, h = int(round(roi[0][0][0])), int(round(roi[0][0][1])), int(round(abs(roi[0][1][0] - roi[0][0][0]))), int(round(abs(roi[0][2][1] - roi[0][1][1])))
         ROI = img[y:y + h, x:x + w]
         data = pytesseract.image_to_string(ROI, lang='ron', config='--psm 6')
         # image[y:y+h, x:x+w] = consorRoi(ROI)
@@ -213,7 +213,8 @@ def test_image(img, model):
     print(output)
     if output == "Output: Offensive":
         for roi in result:
-            x, y, w, h = roi[0][0][0], roi[0][0][1], abs(roi[0][1][0] - roi[0][0][0]), abs(roi[0][2][1] - roi[0][1][1])
+            x, y, w, h = int(round(roi[0][0][0])), int(round(roi[0][0][1])), int(
+                round(abs(roi[0][1][0] - roi[0][0][0]))), int(round(abs(roi[0][2][1] - roi[0][1][1])))
             ROI = img[y:y + h, x:x + w]
             data = pytesseract.image_to_string(ROI, lang='ron', config='--psm 6')
             img[y:y + h, x:x + w] = consorRoi(ROI)

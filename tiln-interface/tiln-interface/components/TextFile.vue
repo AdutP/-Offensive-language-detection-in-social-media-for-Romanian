@@ -108,13 +108,14 @@
           <a-list item-layout="horizontal" :data-source="apiData">
             <a-list-item slot="renderItem" slot-scope="item">
               <a-list-item-meta
-                description=""
+                :description="item.impact_words.join(' ')"
               >
                 <h3 slot="title">{{ item.comment }}</h3>
                 <a-avatar
                   slot="avatar"
                   :src="item.output=='Output: NonOffensive' ? 'http://getdrawings.com/free-icon/tick-icon-52.png' : 'http://getdrawings.com/free-icon/x-icon-white-68.png'"
                 />
+
               </a-list-item-meta>
             </a-list-item>
           </a-list>
@@ -169,7 +170,7 @@ export default {
       let formData = new FormData();
         formData.append('file', this.file);
         formData.append('model', this.$refs.modelselect.$el.innerText);
-        axios.post( 'https://60aa045866f1d000177724b5.mockapi.io/csv-file',
+        axios.post( 'http://localhost:105/csv-file',
         formData,
         {
             headers: {

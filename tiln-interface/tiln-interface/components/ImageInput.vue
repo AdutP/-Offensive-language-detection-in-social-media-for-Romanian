@@ -131,7 +131,7 @@ export default {
       let formData = new FormData();
         formData.append('file', this.file);
         formData.append('model', this.$refs.modelselect.$el.innerText);
-        axios.post( 'https://60aa045866f1d000177724b5.mockapi.io/image',
+        axios.post( 'http://localhost:105/image',
         formData,
         {
             headers: {

@@ -130,13 +130,13 @@ export default {
     },
     trimite: function() {
       
-      axios.post('https://60aa045866f1d000177724b5.mockapi.io/text-input', {
+      axios.post('http://localhost:105/text-input', {
             comment: this.$refs.txtarea.$el.value,
             model: this.$refs.modelselect.$el.innerText
         })
         .then(response => {
           this.output = response.data.output
-          if(this.output=="Output: Offensive") {this.myStyle.backgroundColor="#95de64"} else {this.myStyle.backgroundColor="#ff7875"}
+          if(this.output=="Output: NonOffensive") {this.myStyle.backgroundColor="#95de64"} else {this.myStyle.backgroundColor="#ff7875"}
           this.comment = response.data.comment
           this.impact_words = response.data.impact_words
           //this.card = `<div class=\"ant-col ant-col-8\" style=\"padding-left:8px;padding-right:8px;\"><div class=\"ant-card\"><div class=\"ant-card-head\"><div class=\"ant-card-head-wrapper\"><div class=\"ant-card-head-title\">${this.comment}</div></div></div><div class=\"ant-card-body\"><p>${this.output}</p></div></div></div>`

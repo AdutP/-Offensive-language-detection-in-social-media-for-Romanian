@@ -1,4 +1,5 @@
 import base64
+import json
 import os
 import uuid
 
@@ -11,21 +12,26 @@ from werkzeug.utils import secure_filename
 from flask import send_file
 from colab_interface import test_comment
 from censor_image import test_image
-from flask_cors import CORS
+from flask_cors import CORS, cross_origin
 
 app = Flask(__name__)
 #CORS(app, resources={r"/text-input": {"origins": ["http://localhost:3000"]}})
+CORS(app)
 
 
 @app.route('/hello/', methods=['GET', 'POST'])
+@cross_origin()
 def welcome():
     return "Hello World!"
 
 
 @app.route('/text-input', methods=['POST'])
+@cross_origin()
 def rate_text_input():
-    comment = request.form.get('comment')
-    model = request.form.get('model')
+    data = json.loads(request.data)
+    comment = data.get("comment")
+    print(comment)
+    model = data.get("model")
     output, impact_words = test_comment(comment, model)
     result = flask.jsonify({
         "comment": comment,
@@ -33,11 +39,11 @@ def rate_text_input():
         "model": model,
         "impact_words": impact_words
     })
-    result.headers.add('Access-Control-Allow-Origin', '*')
     return result
 
 
 @app.route('/image', methods=['POST'])
+@cross_origin()
 def rate_image():
     model = request.form.get('model')
     f = request.files['file']
@@ -59,6 +65,7 @@ def rate_image():
 
 
 @app.route('/csv-file', methods=['POST'])
+@cross_origin()
 def rate_csv_file():
     f = request.files['file']
     save_father_path = 'txtfiles'
@@ -66,6 +73,7 @@ def rate_csv_file():
     if not os.path.exists(save_father_path):
         os.makedirs(save_father_path)
     f.save(csv_path)
+
 
     model = request.form.get('model')
     comments = []
@@ -97,4 +105,4 @@ def rate_csv_file():
     return result
     
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=105)
+    app.run(host='localhost', port=105)
